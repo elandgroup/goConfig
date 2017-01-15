@@ -12,7 +12,8 @@ var Config = struct {
 	} `json:"DB"`
 }{}
 
-func InitConfig() {
-	configor.Load(&Config, "config/config.json")
+func InitConfig(cfg string) {
+	// configor.Load(&Config, "config/config.json")
+	 configor.Load(&Config, cfg)
 	fmt.Println(Config.DB.Conn)
 }
