@@ -1,6 +1,8 @@
 package config
 
 import (
+	"fmt"
+
 	"github.com/jinzhu/configor"
 )
 
@@ -12,4 +14,5 @@ var Config = struct {
 
 func InitConfig() {
 	configor.Load(&Config, "config/config.json")
+	fmt.Println(Config.DB.Conn)
 }
